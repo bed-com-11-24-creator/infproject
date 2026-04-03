@@ -12,4 +12,10 @@ export class UsersService {
     getAllUsers () {
         return this.users;
     }
+
+    getUserById(id: number) {
+  const user = this.users.find(u => u.id === id);
+  return user || { message: 'User not found' };
 }
+}
+
